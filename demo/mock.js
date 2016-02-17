@@ -9,7 +9,10 @@ mockjax({
     response: function (settings) {
         let response = []
         for (let i = 0; i < 10; i++) {
-            response.push(settings.data.search + 'test' + i)
+            response.push({
+                text: settings.data.search + 'test' + i,
+                value: i
+            })
         }
         this.responseText = response
     }
