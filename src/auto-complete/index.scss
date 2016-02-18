@@ -13,7 +13,7 @@
   .item {
     padding: 5px 10px;
     cursor: pointer;
-    &:hover {
+    &:hover:not(.active) {
       background: whitesmoke;
     }
     &.active {
