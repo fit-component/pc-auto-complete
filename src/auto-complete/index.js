@@ -95,14 +95,17 @@ export default class AutoComplete extends React.Component {
     filterDatas(datas) {
         let newDatas = []
 
+        let count = 0
         datas.map((item, index)=> {
             let regex = reg(this.searchValue)
             if (this.searchValue === '' || (this.props.autoFilter && !regex.test(item[this.props.parse.text]))) {
                 return
             }
 
+            count++
+
             // 超过最大数量则取消显示
-            if (index + 1 > this.props.maxNumber) {
+            if (count > this.props.maxNumber) {
                 return
             }
 
