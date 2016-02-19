@@ -131,24 +131,30 @@ export default class AutoComplete extends React.Component {
         if (this.state.filterDatas.length === 0) return
 
         switch (event.keyCode) {
-        case 40:
-            // 上
+        case 40: // 上
             let newUpIndex = this.state.selectIndex + 1
             if (newUpIndex > this.state.filterDatas.length - 1) {
                 newUpIndex = 0
             }
             this.handleSelect(this.state.filterDatas[newUpIndex][this.props.parse.text], this.state.filterDatas[newUpIndex][this.props.parse.value], newUpIndex, false, false)
             break
-        case 38:
-            // 下
+        case 38: // 下
             let newDownIndex = this.state.selectIndex - 1
             if (newDownIndex < 0) {
                 newDownIndex = this.state.filterDatas.length - 1
             }
             this.handleSelect(this.state.filterDatas[newDownIndex][this.props.parse.text], this.state.filterDatas[newDownIndex][this.props.parse.value], newDownIndex, false, false)
             break
-        case 13:
-            // enter
+        case 13: // enter
+            // 如果所填没有在显示列表里,return
+            let hasFind = false
+            this.state.filterDatas.map((item)=> {
+                if (item[this.props.parse.text] === this.state.value) {
+                    hasFind = true
+                }
+            })
+            if (!hasFind)return
+
             this.handleSelect(this.state.filterDatas[this.state.selectIndex][this.props.parse.text], this.state.filterDatas[this.state.selectIndex][this.props.parse.value], this.state.selectIndex, true, true)
         }
     }
