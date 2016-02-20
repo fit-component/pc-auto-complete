@@ -146,7 +146,7 @@ export default class AutoComplete extends React.Component {
             this.handleSelect(this.state.filterDatas[newDownIndex][this.props.parse.text], this.state.filterDatas[newDownIndex][this.props.parse.value], newDownIndex, false, false)
             break
         case 13: // enter
-            // 如果所填没有在显示列表里,return
+            // 如果所填没有在显示列表里,则无效
             let hasFind = false
             this.state.filterDatas.map((item)=> {
                 if (item[this.props.parse.text] === this.state.value) {
