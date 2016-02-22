@@ -1,6 +1,6 @@
 {
   "name": "fit-auto-complete",
-  "version": "0.2.40",
+  "version": "0.2.41",
   "description": "auto-complete",
   "main": "lib/index.js",
   "scripts": {

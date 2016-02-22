@@ -15,10 +15,11 @@
     cursor: pointer;
     &:hover:not(.active) {
       background: whitesmoke;
+      color: #1c9aa0;
     }
     &.active {
-      background: #5AA3E2;
-      color: white;
+      background: whitesmoke;
+      color: #1c9aa0;
     }
     &:not(.active) {
       .highlight {
