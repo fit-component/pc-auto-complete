@@ -16,10 +16,7 @@
   "author": "tieba",
   "license": "ISC",
   "dependencies": {
-    "classnames": "^2.2.3",
-    "fit-input": "^1.1.61",
-    "jquery": "^2.2.0",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "classnames": "^2.2.1"
   }
 }
