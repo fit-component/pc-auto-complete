@@ -160,6 +160,12 @@ export default class AutoComplete extends React.Component {
     }
 
     render() {
+        const {className, inputOpts, parse, onSelect, ...others} = this.props
+        const classes = classNames({
+            '_namespace': true,
+            [className]: className
+        })
+
         // 是否为空
         let isEmpty = true
 
@@ -170,12 +176,12 @@ export default class AutoComplete extends React.Component {
             })
 
             let regex = reg(this.searchValue)
-            let matchedString = item[this.props.parse.text].replace(regex, '<span class="highlight">' + this.searchValue + '</span>')
+            let matchedString = item[parse.text].replace(regex, '<span class="highlight">' + this.searchValue + '</span>')
 
             isEmpty = false
 
             return (
-                <div onClick={this.handleSelect.bind(this,item[this.props.parse.text],item[this.props.parse.value],index,true,true)}
+                <div onClick={this.handleSelect.bind(this,item[parse.text],item[parse.value],index,true,true)}
                      key={index}
                      className={itemClass}
                      dangerouslySetInnerHTML={{__html: matchedString}}></div>
@@ -188,13 +194,12 @@ export default class AutoComplete extends React.Component {
         }
 
         return (
-            <div className="_namespace">
-                <Input onFocus={this.handleFocus.bind(this)}
-                       value={this.state.value}
-                       onKeyDown={this.handleKeyDown.bind(this)}
-                       onChange={this.handleChange.bind(this)}
-                       autocomplete={false}
-                    {...this.props.inputOpts}/>
+            <div {...others} className={classes}>
+                <Input {...inputOpts} onFocus={this.handleFocus.bind(this)}
+                                      value={this.state.value}
+                                      onKeyDown={this.handleKeyDown.bind(this)}
+                                      onChange={this.handleChange.bind(this)}
+                                      autocomplete={false}/>
                 <div className="complete-container"
                      style={completeContainerStyle}>
                     {Items}
