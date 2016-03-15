@@ -3,5 +3,5 @@
 ---
 
 ````jsx
-npm install fit-autocomplete /* or */ fis3 install fit-autocomplete
+npm install fit-autocomplete
 ````
