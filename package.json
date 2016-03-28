@@ -1,6 +1,6 @@
 {
   "name": "fit-auto-complete",
-  "version": "2.0.49",
+  "version": "2.0.50",
   "description": "auto-complete",
   "main": "lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "dependencies": {
     "react": "^0.14.7",
     "classnames": "^2.2.1",
-    "fit-input": "^2.0.49",
+    "fit-input": "^2.0.50",
     "jquery": "~2.1.3"
   }
 }
