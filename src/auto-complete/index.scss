@@ -1,6 +1,9 @@
+@import "../../../../../style/reset";
+@import "../../../../../style/color";
+
 & {
+    @include reset;
     position: relative;
-    box-sizing: border-box;
 }
 
 .complete-container {
@@ -9,23 +12,24 @@
     background: white;
     z-index: 1;
     left: 0;
-    top: 33px;
     display: none;
+    width: 100%;
+    top: 38px;
     border: 1px solid #cfdadd;
+    transition: all .3s;
     .item {
-        padding: 5px 10px;
+        position: relative;
+        padding: 10px 15px;
         cursor: pointer;
-        &:hover:not(.active) {
-            background: whitesmoke;
-            color: #1c9aa0;
-        }
-        &.active {
-            background: whitesmoke;
-            color: #1c9aa0;
+        &:hover:not(.active), &.active {
+            color: $primary-color;
+            border-left: 2px solid $primary-color;
+            padding-left: 13px;
+            background: #f8f9fb;
         }
         &:not(.active) {
-            .highlight {
-                color: red;
+            .autocomplete-highlight {
+                color: red !important;
             }
         }
     }

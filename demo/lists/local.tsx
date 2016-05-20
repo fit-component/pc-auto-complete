@@ -1,5 +1,5 @@
-import React from 'react'
-import AutoComplete from 'fit-auto-complete'
+import * as React from 'react'
+import AutoComplete from '../../src'
 
 const opts = {
     datas: [{
@@ -13,12 +13,10 @@ const opts = {
         value: 1
     }],
     autoFilter: true,
-    inputOpts: {
-        placeholder: '小明 小王 小红'
-    }
+    placeholder: '小明 小王 小红'
 }
 
-export default class Demo extends React.Component {
+export default class Demo extends React.Component <any,any> {
     render() {
         return (
             <AutoComplete {...opts}/>

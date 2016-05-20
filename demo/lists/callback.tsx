@@ -1,24 +1,24 @@
-import React from 'react'
-import AutoComplete from 'fit-auto-complete'
+import * as React from 'react'
+import AutoComplete from '../../src'
 
 const opts = {
     url: '/api/auto-complete/basic',
     method: 'get',
-    beforeSend: (value)=> {
+    beforeSend: (value:any)=> {
         return {
             search: value
         }
     },
-    complete: (res)=> {
+    complete: (res:any)=> {
         return res
     },
     delay: 200,
-    onSelect: (value)=> {
+    onSelect: (value:any)=> {
         console.log(value)
     }
 }
 
-export default class Demo extends React.Component {
+export default class Demo extends React.Component <any,any> {
     render() {
         return (
             <AutoComplete {...opts}/>
