@@ -1,6 +1,6 @@
 {
   "name": "fit-auto-complete",
-  "version": "4.0.16",
+  "version": "4.0.17",
   "description": "auto-complete",
   "main": "lib/index.js",
   "scripts": {
@@ -19,8 +19,8 @@
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "classnames": "^2.2.3",
-    "fit-input": "^5.0.9",
-    "fit-transmit-transparently": "^3.1.13",
+    "fit-input": "^5.0.10",
+    "fit-transmit-transparently": "^3.1.14",
     "jquery": "^2.1.4"
   },
   "typings": "lib/index.d.ts"
