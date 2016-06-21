@@ -3,5 +3,5 @@
 ---
 
 ````jsx
-npm install fit-autocomplete
+npm install fit-auto-complete
 ````
