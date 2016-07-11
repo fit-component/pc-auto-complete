@@ -211,7 +211,7 @@ export default class AutoComplete extends React.Component<module.PropsInterface,
                 onKeyDown={this.handleKeyDown.bind(this) }
                 onChange={this.handleChange.bind(this) }
                 innerRender={this.innerRender.bind(this, Items,isEmpty) }
-                autocomplete={false}/>
+                autoComplete={false}/>
         )
     }
 }
