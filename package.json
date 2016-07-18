@@ -1,6 +1,6 @@
 {
   "name": "fit-auto-complete",
-  "version": "4.0.25",
+  "version": "4.0.27",
   "description": "auto-complete",
   "main": "lib/index.js",
   "scripts": {
@@ -16,11 +16,11 @@
   "author": "tieba",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
     "classnames": "^2.2.3",
-    "fit-input": "^5.0.16",
-    "fit-transmit-transparently": "^3.1.18",
+    "fit-input": "^5.0.18",
+    "fit-transmit-transparently": "^3.1.20",
     "jquery": "^2.1.4"
   },
   "typings": "lib/index.d.ts"
